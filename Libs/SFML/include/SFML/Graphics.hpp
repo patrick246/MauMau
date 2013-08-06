@@ -51,6 +51,7 @@
 #include <SFML/Graphics/VertexArray.hpp>
 #include <SFML/Graphics/View.hpp>
 
+#include <SFML/SFMLLibs.hpp>
 
 #endif // SFML_GRAPHICS_HPP
 
