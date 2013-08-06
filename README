@@ -1,0 +1,32 @@
+Hello everyone reading this!
+This is my first GitHub project, I decided to use it for a card game called MauMau.
+The rules are simple:
+ - You play with a double skat deck (64 cards) or a single
+ - Everyone gets a specified amount of cards (can be 5 to 15)
+ - One card is being opened from the remaining stack
+ - Someone begins, usually this is the youngest player
+ - You can play a card if this card matches the color or the number of the card. You can play for example Hearts King onto Hearts 10, or Spades 10 onto Hearts 10
+ - If you only got one card, you have to say "mau" (not going to implement this)
+ - You win if you got no more cards on your hand
+ 
+Special cards:
+	Jack
+	You can decide which color needs to be played from now. Can be played at any time, the color doesn't matter.
+	
+	Seven
+	The next in the round has to take 2 cards from the stack, only if he hasn't got another
+	Seven, then the next one has to take 4 cards, if he also has got a Seven, the next poor guy has to take 6 cards,
+	and so on, you get the point
+	
+	Eight
+	The next player gets skipped.
+	
+	Nine
+	You can play another card. If you can't play any other card, you have to take one from the stack.
+	
+Technical data:
+	
+	Language: 			C++
+	Graphics-Library: 	SFML
+	Available for: 		Windows first, since I use Visual Studio 2010
+						Linux support will be added later.
