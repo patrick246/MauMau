@@ -3,6 +3,12 @@
 #include <map>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+
+#ifdef _DEBUG
+#pragma comment(lib, "InputManager-d.lib")
+#else
+#pragma comment(lib, "InputManager-r.lib")
+#endif
 namespace PGE
 {
 class InputManager
