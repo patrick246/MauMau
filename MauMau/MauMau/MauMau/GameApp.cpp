@@ -4,7 +4,7 @@
 GameApp::GameApp()
 	: input(window)
 {
-	window.create(sf::VideoMode(800,600), "Mau Mau", sf::Style::Titlebar | sf::Style::Close);
+	window.create(sf::VideoMode(1024,768), "Mau Mau", sf::Style::Titlebar | sf::Style::Close);
 }
 
 void GameApp::run()
