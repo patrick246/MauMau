@@ -28,6 +28,9 @@
     <Filter Include="GameEngine\TextureManager">
       <UniqueIdentifier>{7a6b9790-c3ee-408f-99a5-0d816fed0f1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObjects\AI">
+      <UniqueIdentifier>{6f55bde3-578e-436a-9261-93845c5f5760}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameApp.cpp">
@@ -47,6 +50,18 @@
     </ClCompile>
     <ClCompile Include="TextureManager.cpp">
       <Filter>GameEngine\TextureManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Hand.cpp">
+      <Filter>GameObjects\MauMau</Filter>
+    </ClCompile>
+    <ClCompile Include="Card.cpp">
+      <Filter>GameObjects\MauMau</Filter>
+    </ClCompile>
+    <ClCompile Include="CardManager.cpp">
+      <Filter>GameObjects\MauMau</Filter>
+    </ClCompile>
+    <ClCompile Include="Talon.cpp">
+      <Filter>GameObjects\MauMau</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +85,21 @@
     </ClInclude>
     <ClInclude Include="TextureManager.h">
       <Filter>GameEngine\TextureManager</Filter>
+    </ClInclude>
+    <ClInclude Include="IAI.h">
+      <Filter>GameObjects\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Hand.h">
+      <Filter>GameObjects\MauMau</Filter>
+    </ClInclude>
+    <ClInclude Include="Card.h">
+      <Filter>GameObjects\MauMau</Filter>
+    </ClInclude>
+    <ClInclude Include="Talon.h">
+      <Filter>GameObjects\MauMau</Filter>
+    </ClInclude>
+    <ClInclude Include="CardManager.h">
+      <Filter>GameObjects\MauMau</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

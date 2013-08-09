@@ -29,8 +29,11 @@ void StateManager::pushState( const std::string& id )
 	if(id == "")
 		throw std::runtime_error("pushState: id is empty");
 
-	if(id == m_activeState.back())
+	if(m_activeState.size() > 0 && id == m_activeState.back())
 		throw std::runtime_error("pushState: state already on top");
+
+	if(m_registered.find(id) == m_registered.end())
+		throw std::runtime_error("pushState: state " + id + " not registered");
 
 	m_stack.push_back(m_registered[id].get());
 	m_activeState.push_back(id);

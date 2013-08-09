@@ -78,19 +78,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Card.cpp" />
+    <ClCompile Include="CardManager.cpp" />
     <ClCompile Include="Config.cpp" />
     <ClCompile Include="GameApp.cpp" />
+    <ClCompile Include="Hand.cpp" />
     <ClCompile Include="MainMenuState.cpp" />
     <ClCompile Include="MauMauMain.cpp" />
     <ClCompile Include="StateManager.cpp" />
+    <ClCompile Include="Talon.cpp" />
     <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Card.h" />
+    <ClInclude Include="CardManager.h" />
     <ClInclude Include="Config.h" />
     <ClInclude Include="GameApp.h" />
+    <ClInclude Include="Hand.h" />
+    <ClInclude Include="IAI.h" />
     <ClInclude Include="MainMenuState.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateManager.h" />
+    <ClInclude Include="Talon.h" />
     <ClInclude Include="TextureManager.h" />
     <ClInclude Include="util.h" />
   </ItemGroup>

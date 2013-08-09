@@ -16,6 +16,7 @@ private:
 	void update();
 	void render();
 	void handleWindowEvents();
+	void handleResize();
 
 public:
 	sf::RenderWindow window;
