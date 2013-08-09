@@ -1,11 +1,14 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <PGE/InputManager.h>
+#include "Config.h"
+#include "StateManager.h"
+#include "TextureManager.h"
 
 class GameApp
 {
 public:
-	GameApp(void);
+	GameApp(Config& gameConfig);
 
 	void run();
 
@@ -16,8 +19,15 @@ private:
 
 public:
 	sf::RenderWindow window;
-	// StateManager
-	// TextureManager
-	PGE::InputManager input;
+	StateManager statemanager;
+	TextureManager texturemanager;
+	PGE::InputManager inputmanager;
+	Config& config;
+
+	float timestep;
+
+private:
+	sf::Clock m_clock;
+	float m_accumulator;
 };
 

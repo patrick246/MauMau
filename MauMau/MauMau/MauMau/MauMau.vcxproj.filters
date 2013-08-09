@@ -7,27 +7,69 @@
     <Filter Include="GameObjects">
       <UniqueIdentifier>{947f43f2-6bf7-4474-a702-c133b54ef1d2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameEngine\GameApp">
+      <UniqueIdentifier>{f8abd642-3087-46a7-8c2a-afca89c12b1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Config">
+      <UniqueIdentifier>{83cb192c-9361-40e7-b739-b3f82a0a00b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Main">
+      <UniqueIdentifier>{237a3952-b00c-4d87-924f-eeb20412ba56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\StateManager">
+      <UniqueIdentifier>{e43580a5-b5cc-4503-ab47-6addb6d8877d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\States">
+      <UniqueIdentifier>{f753200f-cd56-4724-8125-41ea6e6163f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\MauMau">
+      <UniqueIdentifier>{0cceba62-6ec7-49ea-8142-0eb31ad749de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\TextureManager">
+      <UniqueIdentifier>{7a6b9790-c3ee-408f-99a5-0d816fed0f1e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameApp.cpp">
-      <Filter>GameEngine</Filter>
+      <Filter>GameEngine\GameApp</Filter>
+    </ClCompile>
+    <ClCompile Include="Config.cpp">
+      <Filter>GameEngine\Config</Filter>
     </ClCompile>
     <ClCompile Include="MauMauMain.cpp">
-      <Filter>GameEngine</Filter>
+      <Filter>GameEngine\Main</Filter>
     </ClCompile>
     <ClCompile Include="StateManager.cpp">
-      <Filter>GameEngine</Filter>
+      <Filter>GameEngine\StateManager</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuState.cpp">
+      <Filter>GameObjects\States</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>GameEngine\TextureManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameApp.h">
-      <Filter>GameEngine</Filter>
+      <Filter>GameEngine\GameApp</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>GameEngine\Config</Filter>
     </ClInclude>
     <ClInclude Include="State.h">
-      <Filter>GameEngine</Filter>
+      <Filter>GameEngine\StateManager</Filter>
     </ClInclude>
     <ClInclude Include="StateManager.h">
+      <Filter>GameEngine\StateManager</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
       <Filter>GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuState.h">
+      <Filter>GameObjects\States</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>GameEngine\TextureManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -38,11 +38,10 @@ void StateManager::pushState( const std::string& id )
 
 void StateManager::popState()
 {
-	if(m_stack.size() < 1)
-	{
-		m_stack.pop_back();
-		m_activeState.pop_back();
-	}
+	if(m_stack.size() == 0)
+		throw std::runtime_error("StateManager::getTopStateID, state-stack is empty");
+	m_stack.pop_back();
+	m_activeState.pop_back();
 }
 
 void StateManager::exchangeState( const std::string& id )
@@ -51,7 +50,23 @@ void StateManager::exchangeState( const std::string& id )
 	pushState(id);
 }
 
-const std::string& StateManager::getTopState() const
+const std::string& StateManager::getTopStateID() const
 {
+	if(m_stack.size() == 0)
+		throw std::runtime_error("StateManager::getTopStateID, state-stack is empty");
 	return m_activeState.back();
+}
+
+void StateManager::draw( sf::RenderTarget &t,sf::RenderStates s) const
+{
+	if(m_stack.size() == 0)
+		throw std::runtime_error("StateManager::draw, state-stack is empty");
+	m_stack.back()->draw(t, s);
+}
+
+void StateManager::update( float frametime )
+{
+	if(m_stack.size() == 0)
+		throw std::runtime_error("StateManager::update, state-stack is empty");
+	m_stack.back()->update(frametime);
 }

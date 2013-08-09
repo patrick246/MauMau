@@ -3,11 +3,12 @@
 #include <string>
 #include <map>
 #include <deque>
+#include <SFML/Graphics.hpp>
 
 class State;
 
 class StateManager
-	: sf::Drawable
+	: public sf::Drawable
 {
 public:
 	typedef std::unique_ptr<State> stateptr;
@@ -21,8 +22,11 @@ public:
 	void popState();
 	void exchangeState(const std::string& id);
 	
-	const std::string& getTopState() const;
+	const std::string& getTopStateID() const;
 	bool isRunning();
+
+	void update(float frametime);
+	void draw(sf::RenderTarget &,sf::RenderStates) const;
 
 private:
 	std::map<std::string, stateptr> m_registered;

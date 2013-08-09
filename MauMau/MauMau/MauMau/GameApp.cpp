@@ -1,10 +1,12 @@
 #include "GameApp.h"
 
 
-GameApp::GameApp()
-	: input(window)
+GameApp::GameApp(Config& gameConfig)
+	: inputmanager(window)
+	, config(gameConfig)
+	, timestep(1.f / 60.f)
 {
-	window.create(sf::VideoMode(1024,768), "Mau Mau", sf::Style::Titlebar | sf::Style::Close);
+	window.create(sf::VideoMode(config.get<int>("resX"), config.get<int>("resY")), config.get<std::string>("windowtitle"), sf::Style::Titlebar | sf::Style::Close);
 }
 
 void GameApp::run()
@@ -19,13 +21,22 @@ void GameApp::run()
 
 void GameApp::update()
 {
-
-	input.update();
+	sf::Time frametime = m_clock.restart();
+	m_accumulator += frametime.asSeconds();
+	
+	while(m_accumulator >= timestep)
+	{
+		statemanager.update(timestep);
+		m_accumulator -= timestep;
+	}
+	
+	inputmanager.update();
 }
 
 void GameApp::render()
 {
 	window.clear();
+	window.draw(statemanager);
 	window.display();
 }
 
@@ -39,7 +50,7 @@ void GameApp::handleWindowEvents()
 
 		if(e.type == sf::Event::Resized)
 		{
-			window.setSize(sf::Vector2u(800,600));
+			
 		}
 	}
 }

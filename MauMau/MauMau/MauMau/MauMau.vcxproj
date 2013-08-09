@@ -50,12 +50,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\Libs\SFML\include;..\..\..\Libs\PGE\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\Libs\SFML\include;..\..\..\Libs\PGE\include;..\..\..\Libs\tinyxml2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\..\..\Libs\SFML\lib;..\..\..\Libs\PGE\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\Libs\SFML\lib;..\..\..\Libs\PGE\lib;..\..\..\Libs\tinyxml2\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -78,14 +78,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Config.cpp" />
     <ClCompile Include="GameApp.cpp" />
+    <ClCompile Include="MainMenuState.cpp" />
     <ClCompile Include="MauMauMain.cpp" />
     <ClCompile Include="StateManager.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Config.h" />
     <ClInclude Include="GameApp.h" />
+    <ClInclude Include="MainMenuState.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateManager.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="util.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

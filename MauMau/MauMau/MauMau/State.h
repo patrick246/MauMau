@@ -5,6 +5,7 @@ class GameApp;
 class State
 	:	sf::Drawable
 {
+public:
 	State(GameApp& app) 
 		:	m_app(app)
 	{}
