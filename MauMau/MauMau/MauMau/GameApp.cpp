@@ -2,6 +2,7 @@
 
 // STATES
 #include "MainMenuState.h"
+#include "SingleplayerState.h"
 // STATES END
 
 GameApp::GameApp(Config& gameConfig)
@@ -15,9 +16,10 @@ GameApp::GameApp(Config& gameConfig)
 	
 	// Register the game states
 	statemanager.registerState("MainMenuState", std::unique_ptr<State>(new MainMenuState(*this)));
+	statemanager.registerState("SingleplayerState", std::unique_ptr<State>(new SingleplayerState(*this)));
 
 	// Push the starting state on the stack
-	statemanager.pushState(config.get<std::string>("startState"));
+	statemanager.pushState(config.get<std::string>("startState", "MainMenuState"));
 }
 
 void GameApp::run()

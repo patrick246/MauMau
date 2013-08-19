@@ -6,7 +6,7 @@
 
 MainMenuState::MainMenuState(GameApp& app)
 	:	State(app)
-	,	m_tex_bg(m_app.texturemanager.getTexture("data/MainMenu/bg.png"))
+	,	m_tex_bg(m_app.texturemanager.getTexture("data/shared/bg.png"))
 	,	m_tex_button(m_app.texturemanager.getTexture("data/MainMenu/button.png"))
 {
 	m_tex_bg->setSmooth(true);

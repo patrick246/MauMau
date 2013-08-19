@@ -31,6 +31,15 @@
     <Filter Include="GameObjects\AI">
       <UniqueIdentifier>{6f55bde3-578e-436a-9261-93845c5f5760}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObjects\States\Menu">
+      <UniqueIdentifier>{98c0c109-76e6-4087-8c54-2f8e9d8751fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\States\SP">
+      <UniqueIdentifier>{41f888c7-5c85-4695-9db4-657c13238125}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\States\MP">
+      <UniqueIdentifier>{bde79962-4933-4aa4-8351-838832aec7b2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameApp.cpp">
@@ -45,23 +54,14 @@
     <ClCompile Include="StateManager.cpp">
       <Filter>GameEngine\StateManager</Filter>
     </ClCompile>
-    <ClCompile Include="MainMenuState.cpp">
-      <Filter>GameObjects\States</Filter>
-    </ClCompile>
     <ClCompile Include="TextureManager.cpp">
       <Filter>GameEngine\TextureManager</Filter>
     </ClCompile>
-    <ClCompile Include="Hand.cpp">
-      <Filter>GameObjects\MauMau</Filter>
+    <ClCompile Include="MainMenuState.cpp">
+      <Filter>GameObjects\States\Menu</Filter>
     </ClCompile>
-    <ClCompile Include="Card.cpp">
-      <Filter>GameObjects\MauMau</Filter>
-    </ClCompile>
-    <ClCompile Include="CardManager.cpp">
-      <Filter>GameObjects\MauMau</Filter>
-    </ClCompile>
-    <ClCompile Include="Talon.cpp">
-      <Filter>GameObjects\MauMau</Filter>
+    <ClCompile Include="SingleplayerState.cpp">
+      <Filter>GameObjects\States\SP</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -80,26 +80,17 @@
     <ClInclude Include="util.h">
       <Filter>GameEngine</Filter>
     </ClInclude>
-    <ClInclude Include="MainMenuState.h">
-      <Filter>GameObjects\States</Filter>
-    </ClInclude>
     <ClInclude Include="TextureManager.h">
       <Filter>GameEngine\TextureManager</Filter>
     </ClInclude>
     <ClInclude Include="IAI.h">
       <Filter>GameObjects\AI</Filter>
     </ClInclude>
-    <ClInclude Include="Hand.h">
-      <Filter>GameObjects\MauMau</Filter>
+    <ClInclude Include="MainMenuState.h">
+      <Filter>GameObjects\States\Menu</Filter>
     </ClInclude>
-    <ClInclude Include="Card.h">
-      <Filter>GameObjects\MauMau</Filter>
-    </ClInclude>
-    <ClInclude Include="Talon.h">
-      <Filter>GameObjects\MauMau</Filter>
-    </ClInclude>
-    <ClInclude Include="CardManager.h">
-      <Filter>GameObjects\MauMau</Filter>
+    <ClInclude Include="SingleplayerState.h">
+      <Filter>GameObjects\States\SP</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
