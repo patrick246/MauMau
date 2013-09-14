@@ -8,11 +8,11 @@
 
 
 int main()
-{
-	Config config("config.xml");
-	GameApp app(config);
+{	
 	try
 	{
+		Config config("config.xml");
+		GameApp app(config);
 		app.run();
 	}
 	catch (std::exception& e)

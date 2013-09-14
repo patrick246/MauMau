@@ -44,6 +44,13 @@
 #include <SFML/System/Vector2.hpp>
 #include <SFML/System/Vector3.hpp>
 
+// added by patrick246
+#ifdef _DEBUG
+#pragma comment(lib, "sfml-system-d.lib")
+#else
+#pragma comment(lib, "sfml-system.lib")
+#endif
+
 #endif // SFML_SYSTEM_HPP
 
 ////////////////////////////////////////////////////////////

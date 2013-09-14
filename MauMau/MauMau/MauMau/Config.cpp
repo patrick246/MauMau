@@ -1,5 +1,5 @@
 #include "Config.h"
-#include <TXML2/tinyxml2.h>
+#include <tinyxml2/tinyxml2.h>
 
 Config::Config(void)
 {

@@ -2,7 +2,9 @@
 
 // STATES
 #include "MainMenuState.h"
+#include "SingleplayerPrepareState.h"
 #include "SingleplayerState.h"
+#include "WinState.h"
 // STATES END
 
 GameApp::GameApp(Config& gameConfig)
@@ -11,12 +13,17 @@ GameApp::GameApp(Config& gameConfig)
 	, timestep(1.f / 60.f)
 	, m_accumulator(0.f)
 {
+	// Initialise the C rng
+	std::srand(std::time(nullptr));
+
 	// Create the game window with values from the config file
 	window.create(sf::VideoMode(config.get<int>("resX"), config.get<int>("resY")), config.get<std::string>("windowtitle"), sf::Style::Default);
 	
 	// Register the game states
-	statemanager.registerState("MainMenuState", std::unique_ptr<State>(new MainMenuState(*this)));
-	statemanager.registerState("SingleplayerState", std::unique_ptr<State>(new SingleplayerState(*this)));
+	statemanager.registerState("MainMenuState",				std::unique_ptr<State>(new MainMenuState			(*this)));
+	statemanager.registerState("SingleplayerPrepareState",	std::unique_ptr<State>(new SingleplayerPrepareState	(*this)));
+	statemanager.registerState("SingleplayerState",			std::unique_ptr<State>(new SingleplayerState		(*this)));
+	statemanager.registerState("WinState",					std::unique_ptr<State>(new WinState					(*this)));
 
 	// Push the starting state on the stack
 	statemanager.pushState(config.get<std::string>("startState", "MainMenuState"));

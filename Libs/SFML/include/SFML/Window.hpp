@@ -41,6 +41,13 @@
 #include <SFML/Window/WindowStyle.hpp>
 
 
+// added by patrick246
+#ifdef _DEBUG
+#pragma comment(lib, "sfml-window-d.lib")
+#else
+#pragma comment(lib, "sfml-window.lib")
+#endif
+
 #endif // SFML_SFML_WINDOW_HPP
 
 ////////////////////////////////////////////////////////////

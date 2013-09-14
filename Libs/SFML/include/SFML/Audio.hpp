@@ -38,6 +38,13 @@
 #include <SFML/Audio/SoundRecorder.hpp>
 #include <SFML/Audio/SoundStream.hpp>
 
+// added by patrick246
+#ifdef _DEBUG
+#pragma comment(lib, "sfml-audio-d.lib")
+#else
+#pragma comment(lib, "sfml-audio.lib")
+#endif
+
 
 #endif // SFML_AUDIO_HPP
 

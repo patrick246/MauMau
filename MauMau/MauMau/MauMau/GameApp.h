@@ -3,9 +3,10 @@
 #include <PGE/InputManager.h>
 #include "Config.h"
 #include "StateManager.h"
-#include "TextureManager.h"
+#include "ResourceManager.h"
 
 class GameApp
+	:	sf::NonCopyable
 {
 public:
 	GameApp(Config& gameConfig);
@@ -19,16 +20,17 @@ private:
 	void handleResize();
 
 public:
-	sf::RenderWindow window;
-	StateManager statemanager;
-	TextureManager texturemanager;
-	PGE::InputManager inputmanager;
-	Config& config;
+	sf::RenderWindow	window;
+	StateManager		statemanager;
+	TextureManager		texturemanager;
+	FontManager			fontmanager;
+	pge::InputManager	inputmanager;
+	Config&				config;
 
-	float timestep;
+	float				timestep;
 
 private:
-	sf::Clock m_clock;
-	float m_accumulator;
+	sf::Clock			m_clock;
+	float				m_accumulator;
 };
 

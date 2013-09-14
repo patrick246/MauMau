@@ -39,6 +39,12 @@
 #include <SFML/Network/TcpSocket.hpp>
 #include <SFML/Network/UdpSocket.hpp>
 
+// added by patrick246
+#ifdef _DEBUG
+#pragma comment(lib, "sfml-network-d.lib")
+#else
+#pragma comment(lib, "sfml-network.lib")
+#endif
 
 #endif // SFML_NETWORK_HPP
 

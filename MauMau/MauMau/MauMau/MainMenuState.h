@@ -13,7 +13,7 @@ private:
 	sf::Texture* m_tex_bg;
 	sf::Texture* m_tex_button;
 
-	sf::Font m_font;
+	sf::Font* m_font;
 
 	std::vector<sf::Text> m_buttons;
 

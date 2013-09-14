@@ -20,12 +20,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -67,35 +69,52 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\..\Libs\SFML\include;..\..\..\Libs\PGE\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\..\Libs\SFML\include;..\..\..\Libs\PGE\include;..\..\..\Libs\tinyxml2\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>..\..\..\Libs\SFML\lib;..\..\..\Libs\PGE\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\..\Libs\SFML\lib;..\..\..\Libs\PGE\lib;..\..\..\Libs\tinyxml2\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AIEasy.cpp" />
+    <ClCompile Include="AIPlayer.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="Card.cpp" />
+    <ClCompile Include="CardStack.cpp" />
     <ClCompile Include="Config.cpp" />
     <ClCompile Include="GameApp.cpp" />
+    <ClCompile Include="Hand.cpp" />
     <ClCompile Include="MainMenuState.cpp" />
     <ClCompile Include="MauMauMain.cpp" />
+    <ClCompile Include="MauMauMatch.cpp" />
+    <ClCompile Include="SingleplayerPrepareState.cpp" />
     <ClCompile Include="SingleplayerState.cpp" />
     <ClCompile Include="StateManager.cpp" />
-    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="WinState.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AIEasy.h" />
+    <ClInclude Include="AIPlayer.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="Card.h" />
+    <ClInclude Include="CardStack.h" />
     <ClInclude Include="Config.h" />
     <ClInclude Include="GameApp.h" />
-    <ClInclude Include="IAI.h" />
+    <ClInclude Include="AIBase.h" />
+    <ClInclude Include="Hand.h" />
     <ClInclude Include="MainMenuState.h" />
+    <ClInclude Include="MauMauMatch.h" />
+    <ClInclude Include="SingleplayerPrepareState.h" />
     <ClInclude Include="SingleplayerState.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateManager.h" />
-    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="util.h" />
+    <ClInclude Include="WinState.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

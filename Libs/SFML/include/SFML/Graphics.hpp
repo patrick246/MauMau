@@ -51,7 +51,12 @@
 #include <SFML/Graphics/VertexArray.hpp>
 #include <SFML/Graphics/View.hpp>
 
-#include <SFML/SFMLLibs.hpp>
+// added by patrick246
+#ifdef _DEBUG
+#pragma comment(lib, "sfml-graphics-d.lib")
+#else
+#pragma comment(lib, "sfml-graphics.lib")
+#endif
 
 #endif // SFML_GRAPHICS_HPP
 

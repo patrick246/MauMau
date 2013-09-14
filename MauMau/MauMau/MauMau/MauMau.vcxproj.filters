@@ -25,20 +25,56 @@
     <Filter Include="GameObjects\MauMau">
       <UniqueIdentifier>{0cceba62-6ec7-49ea-8142-0eb31ad749de}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GameEngine\TextureManager">
-      <UniqueIdentifier>{7a6b9790-c3ee-408f-99a5-0d816fed0f1e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="GameObjects\AI">
       <UniqueIdentifier>{6f55bde3-578e-436a-9261-93845c5f5760}</UniqueIdentifier>
     </Filter>
     <Filter Include="GameObjects\States\Menu">
       <UniqueIdentifier>{98c0c109-76e6-4087-8c54-2f8e9d8751fc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GameObjects\States\SP">
-      <UniqueIdentifier>{41f888c7-5c85-4695-9db4-657c13238125}</UniqueIdentifier>
-    </Filter>
     <Filter Include="GameObjects\States\MP">
       <UniqueIdentifier>{bde79962-4933-4aa4-8351-838832aec7b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\States\SPSetup">
+      <UniqueIdentifier>{41f888c7-5c85-4695-9db4-657c13238125}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\ResourceManager">
+      <UniqueIdentifier>{7a6b9790-c3ee-408f-99a5-0d816fed0f1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine\Button">
+      <UniqueIdentifier>{f0e9fc6a-59b8-4285-852c-8d31e2fc4aed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\States\SP">
+      <UniqueIdentifier>{dc19e191-a2a4-41ae-918c-bfe21c53b5e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\States\MPSetup">
+      <UniqueIdentifier>{1910563b-80a9-4e64-9d41-534c74818729}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\MauMau\Card">
+      <UniqueIdentifier>{3d292cc5-f531-415d-9422-c7f1b86c8366}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\MauMau\CardContainers">
+      <UniqueIdentifier>{c5905203-f34b-4ff9-ab10-e04551b06504}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\MauMau\Match">
+      <UniqueIdentifier>{381778ea-62f2-4d5f-91b7-406e4abae2fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\MauMau\CardContainers\Stack">
+      <UniqueIdentifier>{0591d707-6b48-4056-a9b6-3b1d91df823a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\MauMau\CardContainers\Hand">
+      <UniqueIdentifier>{c3e99bd1-ffde-4a79-a051-fe9483ee5e54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\AI\Easy">
+      <UniqueIdentifier>{28649bd0-27dd-4ded-b43a-2eeef7bdab9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\AI\Player">
+      <UniqueIdentifier>{f5ddb6f5-10e4-45b3-8488-66335c21ab23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\AI\Base">
+      <UniqueIdentifier>{b010c387-eb3b-4023-8f4f-c54172ab0c92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObjects\States\Win">
+      <UniqueIdentifier>{2cfed46d-3c05-45aa-8b44-c164ebb22fa6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -54,14 +90,38 @@
     <ClCompile Include="StateManager.cpp">
       <Filter>GameEngine\StateManager</Filter>
     </ClCompile>
-    <ClCompile Include="TextureManager.cpp">
-      <Filter>GameEngine\TextureManager</Filter>
-    </ClCompile>
     <ClCompile Include="MainMenuState.cpp">
       <Filter>GameObjects\States\Menu</Filter>
     </ClCompile>
+    <ClCompile Include="SingleplayerPrepareState.cpp">
+      <Filter>GameObjects\States\SPSetup</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>GameEngine\Button</Filter>
+    </ClCompile>
     <ClCompile Include="SingleplayerState.cpp">
       <Filter>GameObjects\States\SP</Filter>
+    </ClCompile>
+    <ClCompile Include="MauMauMatch.cpp">
+      <Filter>GameObjects\MauMau\Match</Filter>
+    </ClCompile>
+    <ClCompile Include="CardStack.cpp">
+      <Filter>GameObjects\MauMau\CardContainers\Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="Hand.cpp">
+      <Filter>GameObjects\MauMau\CardContainers\Hand</Filter>
+    </ClCompile>
+    <ClCompile Include="Card.cpp">
+      <Filter>GameObjects\MauMau\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="AIEasy.cpp">
+      <Filter>GameObjects\AI\Easy</Filter>
+    </ClCompile>
+    <ClCompile Include="AIPlayer.cpp">
+      <Filter>GameObjects\AI\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="WinState.cpp">
+      <Filter>GameObjects\States\Win</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -80,17 +140,44 @@
     <ClInclude Include="util.h">
       <Filter>GameEngine</Filter>
     </ClInclude>
-    <ClInclude Include="TextureManager.h">
-      <Filter>GameEngine\TextureManager</Filter>
-    </ClInclude>
-    <ClInclude Include="IAI.h">
-      <Filter>GameObjects\AI</Filter>
-    </ClInclude>
     <ClInclude Include="MainMenuState.h">
       <Filter>GameObjects\States\Menu</Filter>
     </ClInclude>
+    <ClInclude Include="SingleplayerPrepareState.h">
+      <Filter>GameObjects\States\SPSetup</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>GameEngine\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>GameEngine\Button</Filter>
+    </ClInclude>
     <ClInclude Include="SingleplayerState.h">
       <Filter>GameObjects\States\SP</Filter>
+    </ClInclude>
+    <ClInclude Include="Card.h">
+      <Filter>GameObjects\MauMau\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="MauMauMatch.h">
+      <Filter>GameObjects\MauMau\Match</Filter>
+    </ClInclude>
+    <ClInclude Include="CardStack.h">
+      <Filter>GameObjects\MauMau\CardContainers\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="Hand.h">
+      <Filter>GameObjects\MauMau\CardContainers\Hand</Filter>
+    </ClInclude>
+    <ClInclude Include="AIEasy.h">
+      <Filter>GameObjects\AI\Easy</Filter>
+    </ClInclude>
+    <ClInclude Include="AIPlayer.h">
+      <Filter>GameObjects\AI\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="AIBase.h">
+      <Filter>GameObjects\AI\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="WinState.h">
+      <Filter>GameObjects\States\Win</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
